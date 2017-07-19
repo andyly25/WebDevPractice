@@ -1,0 +1,56 @@
+   
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <h1>A basic form with no backend</h1>
+    <!-- action where form sends data to -->
+    <!-- method what HTTP method (get/post) -->
+    <form>
+        <label>
+            Username:
+            <!-- Here are some of the different types of inputs -->
+            <input name="username" type="text" placeholder="username">
+        </label>
+        <label>
+            Password:
+            <input name="password" type="password" placeholder="password">
+        </label>
+        
+
+        <!-- you also have this version of submit
+        <button>Submit</button> -->
+        <input type="submit">
+
+        <!-- <input type="date">
+
+        <input type="color" >
+
+        <input type="file" >
+
+        <input type="checkbox" >
+
+        <input type="radio"> -->
+
+        <!-- Note there's a lot of different types so check it out here:
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+        -->
+
+    </form>
+    
+    <!-- Alternate of above using labels is with the for and id attributes so no need to nest inputs inside labels -->
+    <form>
+        <label for="username">Username:</label>
+        <input id="username" type="text" placeholder="username">
+
+        <label for="password">Password:</label>
+        <input id="password" type="password" placeholder="password">
+
+        <input type="submit">
+
+        
+    </form>
+</body>
+</html>
