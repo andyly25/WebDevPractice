@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inputs Demo</title>
+</head>
+<body>
+    <p>Do you prefer cars or dogs?</p>
+    <form>
+        <label for="dogs">Dogs:</label>
+        <!-- Radio mainly used when only need one choice e.g. M/F -->
+        <!-- Giving the same name allows the two radios to be connected -->
+        <!-- Using value gives the data/choice meaning -->
+        <input id="dogs" type="radio" name="petChoice" value="DOG">
+
+        <label for="cats">Cats:</label>
+        <input id="cats" type="radio" name="petChoice" value="CAT">
+        
+        <p>What is your mood?</p>
+        <!-- select gives you a drop down menu; don't forget to add a name -->
+        <select name="mood">
+            <!-- option allows you to add in different choices to pick -->
+            <option value="none">Pick an emoji :)</option>
+            <option value="happy">:D</option>
+            <option value="mad">D:<</option>
+            <option value="cry">TT_TT</option>
+            <option value="deadpan">:|</option>
+        </select>
+        
+        <textarea name="paragraph" rows="10" cols="50"></textarea>
+
+        <!-- if button is the last thing in the form, it will submit the form -->
+        <button>Submit!</button>
+    </form>
+
+    <!-- Checkbox can be 0 or more answers -->
+    <input type="checkbox" name="checkbox">
+
+    
+    <p>Down belew is my attempt at the exercise</p>
+    <hr>
+
+    <h1>Register</h1>
+    <form>
+        <label for="first">First Name:</label>
+        <input id="first" type="text" name="name" required="true" placeholder="first">
+        <label for="last">Last Name:</label>
+        <input id="last" type="text" name="name" required="true" placeholder="last">
+        
+        <!-- using div to separate otherwise will all be inline -->
+        <div>
+            <label for="male">Male:</label>
+            <input id="male" value="male" type="radio" name="gender">
+            <label for="female">Female:</label>
+            <input id="female" value="female" type="radio" name="gender">
+            <label for="other">Other:</label>
+            <input id="other" value="other" type="radio" name="gender">
+        </div>
+        
+        <div>
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="auth" placeholder="email" required>
+            <label for="password">Password:</label>
+            <input id="password" type="password" name="auth" placeholder="password" minlength="5" maxlength="10" size="10"  required>
+            <!-- can also do
+                <input pattern=".{5,10}" required title="5 to 10 characters">
+                title is the error message displayed
+             -->
+        </div>
+
+        <div>
+            <label>Birthday:
+                <select name="month">
+                    <option>Month</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>December</option>
+                </select>
+                <select name="day">
+                    <option>Day</option>
+                    <option>7</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>5</option>
+                </select>
+                <select name="year">
+                    <option>Year</option>
+                    <option>1990</option>
+                    <option>1991</option>
+                    <option>2050</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label for="conditions">I agree to the terms and conditions</label>
+            <input id="conditions" type="checkbox" name="conditions" required>
+        </div>
+        <button>Submit</button>
+    </form>
+
+</body>
+</html>

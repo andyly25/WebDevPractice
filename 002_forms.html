@@ -40,13 +40,16 @@
 
     </form>
     
-    <!-- Alternate of above using labels is with the for and id attributes so no need to nest inputs inside labels -->
+    <!-- Alternate of above using labels is with the for and id attributes so no need to nest inputs inside labels 
+    adding in 'required' prevents page from submitting unless filled out
+    this is a presence validation
+    -->
     <form>
-        <label for="username">Username:</label>
-        <input id="username" type="text" placeholder="username">
+        <label for="username">E-mail</label>
+        <input id="username" type="email" placeholder="e-mail" required>
 
         <label for="password">Password:</label>
-        <input id="password" type="password" placeholder="password">
+        <input id="password" type="password" placeholder="password" required>
 
         <input type="submit">
 
