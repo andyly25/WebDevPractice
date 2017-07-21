@@ -1,0 +1,63 @@
+/*There's supposedly 30 selectors that we should be familiar with*/
+
+/*Element*/
+li{
+
+}
+
+/*class*/
+.hello{
+
+}
+
+/*id*/
+#name{
+
+}
+
+/*Star: this symbol will target every single element on page
+most developers use this trick to zero the margins and padding*/
+*{
+    border: 1px solid lightgrey;
+}
+
+/*Descendant selector
+for example, want to affect the anchor tags that are within li, not the plain a
+layman's version: access all a's within a list element
+*/
+li a{
+    color: red;
+}
+
+/*Adjacent selector
+allows access to siblings
+e.g. h4 and ul that are next to each other have red border
+*/
+
+h4 + ul{
+    border: 4px solid red;
+}
+
+/*attribute selector
+e.g. select every anchor tag with href equal to google and set a color
+*/
+a[href="http://www.google.com"]{
+    background: yellow;
+}
+input[type="checkbox"]{
+    background: purple;
+}
+
+/*nth of type
+takes a number and then select every nth of the element
+*/
+ul:nth-of-type(3){
+    background: orange;
+}
+li:nth-of-type(2){
+    background: brown;
+}
+
+li:nth-of-type(odd){
+    background: green;
+}

@@ -1,0 +1,33 @@
+h1{
+    /*This uses hexadeximal*/
+    color: #54206E;
+    /*giving a border requires all three of the below*/
+/*    border-color: purple;
+    border-width: 5px;
+    border-style: solid;*/
+
+    /*shortened form*/
+    border: 8px dashed purple;
+}
+
+li{
+    color: rgb(255, 0, 0);
+}
+
+h4{
+    color: rgba(11,99,150,0.3);
+}
+
+body{
+    /*
+    / *sets a background from url* /
+    background: url(http://cpsresources.com/wp-content/uploads/2014/12/9436-Matte-Woodgrain-Matte.jpg);
+    / *makes the image to not repeat* /
+    background-repeat: no-repeat;
+    / *stretched image to fill screen* /
+    background-size: cover;*/
+}
+
+h4{
+    background: rgb(255,255,0);
+}

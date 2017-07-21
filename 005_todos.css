@@ -1,0 +1,14 @@
+li{
+    border: 2px solid red;
+}
+
+/*This is how you edit an id*/
+#special{
+    background: yellow; 
+}
+
+/*Here how you edit a class*/
+.apple{
+    background: pink;
+    text-decoration: line-through;
+}
