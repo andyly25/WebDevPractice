@@ -1,0 +1,34 @@
+/*font-family; NOTE, use "" when there's fonts with numbers*/
+p{
+    font-family: Arial;
+}
+h1{
+    font-family: Georgia;
+}
+/*font-size
+there is also em values: size is dynamic. Equal to size of font that applies to
+parent of element in question.
+Most would set a font-size to the body and then they can manipulate using em.
+By default usually 16px
+*/
+
+body{
+    font-size: 10px;
+}
+h1{
+    font-size: 4.0em;
+}
+/*Twice size of current font size*/
+p{
+    font-size: 2.0em;
+}
+span{
+    font-size: 2.0em;
+}
+/*font-weight*/
+
+/*line-height*/
+
+/*text-align*/
+
+/*text-decoration*/
