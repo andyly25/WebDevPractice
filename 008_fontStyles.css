@@ -2,8 +2,9 @@
 p{
     font-family: Arial;
 }
+/*Here I used a google font and a backup san-serif if doesn't work*/
 h1{
-    font-family: Georgia;
+    font-family: Open Sans, sans-serif;
 }
 /*font-size
 there is also em values: size is dynamic. Equal to size of font that applies to

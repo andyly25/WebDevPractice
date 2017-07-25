@@ -1,0 +1,35 @@
+/*In Chrome:
+    blue is content, green is padding, orange is margin when you
+    inspect the elements
+*/
+
+p{
+    /*Content - width and Height
+        can use px or percentage (by parent element)
+    */
+    /*width: 200px;*/
+    width: 50%;
+
+    /*border*/
+    border: 2px solid blue;
+
+    /*padding:
+        extra spacing around content
+        similar to how border works
+    */
+    /*padding: 10px;*/
+    padding-left: 40px;
+
+    /*margin
+        spacing outside of border, between elements
+        can do margin-top, bottom, left, right
+        if you do margin then goes in order of top, right, bottom, left
+        can also do an auto
+    */
+   /*margin: 100px;*/
+   /*margin: 20px 40px 80px 60px;*/
+
+   /*margin: 0 auto 0 auto*/
+   /*even more shortcut is*/
+   margin: 0 auto;
+}
