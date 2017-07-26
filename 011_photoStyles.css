@@ -1,0 +1,22 @@
+/*Goal is to have 3 images per row so we use 30%
+  Then spacing between images is 10/3 = 1.6%
+*/
+img{
+    width: 30%;
+    float: left;
+    margin: 1.6%;
+}
+
+/*Here we apply out font for the title
+  EDIT its margin, size, weight, make all uppercase, add bottom border and pad
+*/
+p{
+    font-family: Raleway, sans-serif;
+    margin-left: 1.66%;
+    font-size: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f1f1f1;
+    width: 30%;
+    padding-bottom: 20px;
+}
