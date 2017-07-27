@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Basic</title>
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"> -->
+    <!-- Or you can use external file hosted online -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- lazy so I'll add some css here 
+        This shows that you can change bootstrap css
+    -->
+    <style type="text/css">
+        .btn-danger{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>BS basics</h1>
+    <!-- here's an example using variety of bootstrap buttons/attributes -->
+    <button class="btn btn-danger btn-xs">Click me</button>
+    <button class="btn btn-success btn-xs active" >Click me</button>
+    <button class="btn btn-warning btn-xs" disabled="disabled">Click me</button>
+    <a href="http://www.getbootstrap.com" class="btn btn-info btn-lg">Bootstrap Docs</a>
+    <!-- when put inside container, gives some padding and centers things -->
+    <div class="container">
+        <!-- Helps highlight what you want others to see in this box -->
+        <div class="jumbotron">
+            <h1>This is a jumbotron</h1>
+            <p>Apples are pears and likes to go bananas</p>
+            <button class="btn btn-success btn-lg">Something</button>
+        </div>
+    </div>
+    
+</body>
+</html>
