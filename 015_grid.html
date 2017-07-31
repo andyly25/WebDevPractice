@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BS Grid System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style type="text/css">
+        .pink{
+            background: pink;
+            border: 1px solid purple;
+        }
+        .orange{
+            background: orange;
+            height: 50px;
+            border: 1px dashed red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Objective
+        1. understand grid system
+            - helps us lay things out
+        2. understand 4 different sizes
+            - lg, md, sm, xs
+        3. write nested grids
+            - adding a row inside a col and fill that row with further sub col
+
+        NOTE: http://getbootstrap.com/css/#grid
+        grid system is based on 12 columns to make up the grid
+
+        then in grid option it shows you the diffferent sizes for each devices
+     -->
+     <div class="container">
+         <!-- <div class="row">
+             <div class="col-lg-2 pink">COL LG 2</div>
+             <div class="col-lg-8 pink">COl Lg 8</div>
+             <div class="col-lg-2 pink">COl Lg 2</div>
+         </div>
+         <div class="row">
+             <div class="col-lg-4 pink">Col Lg 4</div>
+             <div class="col-lg-4 pink">Col Lg 4</div>
+             <div class="col-lg-4 pink">Col Lg 4</div>
+         </div>
+         <div class="row">
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+             <div class="col-lg-1 pink">COL LG 1</div>
+
+         </div> -->
+
+        <!-- here we added in col-md-2 so when we read medium point each takes up 2 col instead -->
+         <!-- <div class="row">
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+             <div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+         </div> -->
+
+         <!-- here we adjust sizes based on how large the window
+            ... just found out how the instructor selected multiple duplicate lines
+            just highlight the one we want then keep pressing ctr+D to keep selecting.
+            Making duplicate lines is cmd+shift+D ... wish he had a keyboard press image
+
+            Anyways, shortcut if large and medium both have same size, we can 
+            just set for medium and then both of them will have same size
+          -->
+         <div class="row">
+             <div class="col-md-3 col-sm-6 pink">
+                 <div class="row">
+                    <div class="col-lg-6 orange">First half</div>
+                    <div class="col-lg-6 orange">Other half</div>
+                 </div>
+             </div>
+             <div class="col-md-3 col-sm-6 pink">Tour Date</div>
+             <div class="col-md-3 col-sm-6 pink">Tour Date</div>
+             <div class="col-md-3 col-sm-6 pink">
+                <div class="row">
+                    <div class="col-lg-2 orange"></div>
+                    <div class="col-lg-2 orange"></div>
+                    <div class="col-lg-2 orange"></div>
+                    <div class="col-lg-2 orange"></div>
+                    <div class="col-lg-2 orange"></div>
+                    <div class="col-lg-2 orange"></div>
+                </div>
+             </div>
+         </div>
+     </div>
+</body>
+</html>
