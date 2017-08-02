@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="016_gallery.css">
+</head>
+<body>
+    <!-- to have navbar fixed to top add in navbar-fixed-top
+        problem is some of the content(70px to be exact) is behind the nav so
+        add a padding of 70 px to body to solve our problem!
+     -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <!-- the container helps the navbar elemets to not hug the sides -->
+        <div class="container">
+            <div class="navbar-header">
+                <!-- This here is the hamburger when you minimize screen,
+                each of those spans are actually the lines making the hamburger looking images
+                Data-target we need to use a # and the id we are targeting, this applies the opening and closing effect to that target
+                  -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- to add a picture glyphicon we add in a span with class glyphicon and the glyphicon we desire -->
+                <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Image Gallery</a>
+            </div>
+            <!-- navbar-collapse allows these elements to collapse -->
+            <div class="collapse navbar-collapse" id="bs-nav-demo">
+            <ul class="nav navbar-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <!-- navbar-right positions the elements on right side -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Log In</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <!-- also added in a span here for a glyphicon brand image -->
+            <h1><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> The Image Gallery</h1>
+            <p>a bunch of free images from Unsplash</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="http://i.imgur.com/qK42fUu.jpg">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="http://i.imgur.com/qK42fUu.jpg">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="http://i.imgur.com/qK42fUu.jpg">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="http://i.imgur.com/qK42fUu.jpg">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="http://i.imgur.com/qK42fUu.jpg">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="http://i.imgur.com/qK42fUu.jpg">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="http://i.imgur.com/qK42fUu.jpg">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="http://i.imgur.com/qK42fUu.jpg">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="http://i.imgur.com/qK42fUu.jpg">
+            </div>
+        </div>
+    </div>
+    
+
+    <script
+        src="http://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous">
+    </script>
+    <script 
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+        crossorigin="anonymous">
+</script>
+</body>
+</html>
