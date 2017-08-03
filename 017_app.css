@@ -1,0 +1,47 @@
+/*applying background image to the page*/
+body{
+    background: url(https://images.unsplash.com/photo-1415369629372-26f2fe60c467?dpr=2&fit=crop&fm=jpg&h=775&q=50&w=1450);
+    background-size: cover;
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    font-family: Lato;
+    color: white;
+}
+/*commented since put into body, no problem since the other elements are more specific*/
+/*h1, h3{
+    color: white;
+}*/
+
+/*Note that body does not take up full height so the background image is
+repeated. It will be fixed if I edit height of html
+*/
+
+html{
+    height: 100%;
+}
+
+h1{
+    font-weight: 700;
+    /*want the font to be 5 times the size of current*/
+    font-size: 5em;
+}
+
+/*adjusting its size to fit underneath the slogan*/
+hr{
+    width: 400px;
+    border: 1px solid #f8f8f8;
+    /*a slight shadow underneath hr*/
+    border-bottom: 1px solid rgba(0,0,0,0.2)
+}
+
+#content{
+    text-align: center;
+    padding-top: 25%;
+    /* 
+    x offset, then y offset, blur radius, and color
+    his purpose was to make different shades of gray
+    */
+    text-shadow:    0px 4px 3px rgba(0,0,0,0.4),
+                    0px 8px 13px rgba(0,0,0,0.1),
+                    0px 18px 23px rgba(0,0,0,0.1);
+}

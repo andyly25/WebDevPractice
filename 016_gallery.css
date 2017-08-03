@@ -1,3 +1,61 @@
 body{
     padding-top: 70px;
 }
+
+.jumbotron{
+    color: #2c3e50;
+    background: #ecf0f1;
+}
+
+.navbar-inverse{
+    background: #2c3e50;
+}
+
+/*
+    Note we can't just change a tag to white, if you inspect the page 
+    you'll see that to change the color is the code below due to this 
+    specificity being higher.
+ */
+.navbar-inverse .navbar-nav>li>a{
+    color: white;
+}
+
+.navbar-inverse .navbar-brand{
+    color: white;
+}
+/*
+.image1{
+    background-image: url("UnsplashPhotos/a1.jpg");
+}
+.image2{
+    background-image: url("UnsplashPhotos/a2.jpg");
+}
+.image3{
+    background-image: url("UnsplashPhotos/a3.jpg");
+}
+.image4{
+    background-image: url("UnsplashPhotos/a4.jpg");
+}
+.image5{
+    background-image: url("UnsplashPhotos/a5.jpg");
+}
+.image6{
+    background-image: url("UnsplashPhotos/a6.jpg");
+}
+.image7{
+    background-image: url("UnsplashPhotos/a7.jpg");
+}
+.image8{
+    background-image: url("UnsplashPhotos/a8.jpg");
+}
+.image9{
+    background-image: url("UnsplashPhotos/a9.jpg");
+}*/
+
+/* This helps to resize the images so that they are all equal*/
+.image{
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center center;
+}
