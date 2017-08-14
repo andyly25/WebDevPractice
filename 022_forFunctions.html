@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>testing out functions</title>
+    <script type="text/javascript" src="022_forFunctions.js">
+
+    </script>
+</head>
+<body>
+    <h1>isEven?</h1>
+    <p>is 43 even?</p>
+
+    <script type="text/javascript">
+        document.write("Using document.write: 43 is " + isEven(43))
+    </script>
+
+    <p id="checkEven"></p>
+    <script type="text/javascript">
+        document.getElementById("checkEven").innerHTML = 
+        "Using innerHTML: 43 is " + isEven(43);
+    </script>
+    
+    <h1>factorial of 5</h1>
+    <script type="text/javascript">
+        document.write("Using document.write: factorial(5) is " + factorial(5));
+    </script>
+
+    <h1>kebabToSnake</h1>
+    <script type="text/javascript">
+        document.write("Using document.write: kebabToSnake('some-thing_for-Func_tions is l_o-l_l-a ') is: " 
+            + kebabToSnake("some-thing_for-Func_tions is l_o-l_l-a"));
+    </script>
+
+    <p>If you want to test these two functions, just right click -> inspect -> 
+    console and then you can:
+    <br>used the function <b>isEven(someNumber)</b> or <b>factorial(someNumber)</b>
+    <br> or <b>kebabToSnake(someString)</b></p>
+</body>
+</html>
