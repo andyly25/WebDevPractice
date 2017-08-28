@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>textContent</title>
+    <!-- lazy to make a css page -->
+    <style type="text/css">
+        .big{
+            font-size: 100px;
+            color: orange;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>TextContent</h1>
+    <p>This is an <strong>example</strong> paragraph</p>
+    <p>original: This is an <strong>example</strong> paragraph</p>
+    <ul>
+        <li>apple</li>
+        <li>pears</li>
+        <li>original: pears</li>
+        <li>oranges</li>
+    </ul>
+
+    <p>In the console grab the element you want to change then you can use
+    textContent to view content without all the other formatting:</p>
+    <p>var ul = document.querySelector("ul")</p>
+    <p>ul.textContent</p>
+    <p>innerHTML is useful as to not remove tags associated with the content
+    so use that for the first p to test</p>
+    <script type="text/javascript" src="j030_textContent.js"></script>
+</body>
+</html>

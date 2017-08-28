@@ -33,7 +33,7 @@ var tags = document.getElementsByClassName("bolded");
 console.log(tags[0]);
 
 // NOTE: recommended for styles to be defined in separate files
-// better to make the id or class (for this e.g.) in the css portion then do:
+// better to make the id or class (for this e.g.) in the css p ortion then do:
 // tag.classList.add("someClass"); // in the JS portion
 var someTag = document.querySelector("h1");
 someTag.classList.add("someClass");
