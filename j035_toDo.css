@@ -1,0 +1,10 @@
+/*Better practice to add classes rather than making styles one at a time*/
+
+.done{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.selected{
+    color: red;
+}
