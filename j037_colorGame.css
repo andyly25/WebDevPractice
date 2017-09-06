@@ -1,9 +1,41 @@
 body{
     background-color: #232323;
+    margin: 0;
+    font-family: "Montserrat" "Avenir";
 }
 
 h1{
+    /*The blue header that is at the top of page*/
+    text-align: center;
+    line-height: 1.1;
+    font-weight: normal;
     color: white;
+    background-color: steelblue;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+button{
+    /*uppercase button that inherits size of font*/
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    /*get rid of annoying blue outline*/
+    outline: none;
+}
+
+button:hover{
+    color: white;
+    background-color: steelblue;
 }
 
 /*span{
@@ -11,21 +43,48 @@ h1{
 }*/
 
 .square{
+    /*measurement so that 3 squares with spacing will take up ~100% width*/
     width: 30%;
     background: purple;
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
+    border-radius: 15%;
+    transition: background 0.5s;
+    /*for transition to work in all browsers we need to add this in*/
+    /*webkit is a web engine that things like safari uses*/
+    -webkit-transition: background 0.5s;
+    /*this is for mozilla*/
+    -moz-transition: background 0.5s;
+}
+
+.selected{
+    /*if you press easy or hard button it changes the button color*/
+    color: white;
+    background-color: steelblue;   
 }
 
 #container{
-    margin: 0 auto;
+    /*contains all our squares constrained to max 600 px wide*/
+    margin: 20px auto;
     max-width: 600px;
 }
 
 #stripe{
+    /*makes the stripe for new colors and easy and hard*/
     background: white;
     height: 30px;
     text-align: center;
     
+}
+
+#colorDisplay{
+    /*making font size twice the size*/
+    font-size: 200%;
+}
+
+#message{
+    /*using display you also need to specify a width*/
+    display: inline-block;
+    width: 20%;
 }
