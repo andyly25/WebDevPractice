@@ -21,6 +21,7 @@
 //     "rgb(255, 0, 255)",
 // 
 
+// keeping all variables here
 var numSquares = 6;
 var colors = [];
 var pickedColor;
@@ -153,6 +154,7 @@ function colorArrayFunct(arr){
     }
 }
 
+// sets up our hard and easy buttons to function correctly
 function setupModeBtns(){
     for(var i = 0; i < modeButtons.length; i++){
         modeButtons[i].addEventListener("click", function(){
