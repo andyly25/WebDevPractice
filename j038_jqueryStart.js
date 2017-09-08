@@ -17,3 +17,15 @@ $("#special").css(styles)
 $("li").css("color", "green");
 
 // Note!: CSS font-size, but in JS and jQuery it's camelCase fontSize.
+
+
+$("#third").css("border", "2px solid orange");
+$("div").css("backgroundColor", "purple");
+// select all div with class divss
+$("div.divss").css("width", "200px");
+// this works but I forgot there was... first-of-type
+// $("div:nth-of-type(1)").css("backgroundColor", "lime");
+$("div:first-of-type").css("color", "lime");
+// however... jQuery has a built in shorter version, but it takes longer
+// to load since it's not built in css 
+// $("div:first").css("color", "lime");
