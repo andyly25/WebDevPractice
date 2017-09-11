@@ -39,3 +39,21 @@ $("button").on("mouseleave", function(){
  * click adds listeners for existing elements
  * on() will add listeners for all potential future elements
  */
+$("#deathToDivs").on("click", function(){
+    //if we want to have code go after 1 second, we do a callback here as well
+    // changed the fadeout to fadetoggle so I guess they aren't truly dead
+    $('div').fadeToggle(1000, function(){
+        console.log("Fade accomplished!");
+        // to be completely evil, add in
+        // $(this).remove();
+    });
+})
+$("#deathToDivss").on("click", function(){
+    //if we want to have code go after 1 second, we do a callback here as well
+    // changed the fadeout to fadetoggle so I guess they aren't truly dead
+    $('div').slideToggle(1000, function(){
+        console.log("slide accomplished!");
+        // to be completely evil, add in
+        // $(this).remove();
+    });
+})
