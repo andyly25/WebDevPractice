@@ -9,3 +9,33 @@ $("button").click(function(){
     var text = $(this).text();
     console.log("you clicked " + text);
 })
+
+// keyup and keydown are also quite useful
+// Here we shall try using keypress() this is easy way to add keypress listener
+// very similar to click
+// Note if you want for specific keyboard press, look up the char codes keycode
+// enter is 13
+$("#keyPressed").keypress(function(event){
+    if(event.which === 13){
+        alert("you hit endter!")
+    }
+})
+
+// on() works similar to addEventListener, specify type of event to listen for
+// supports all types of events not just click e.g. click, dblclick, keypress
+$("h2").on("click", function(){
+    $(this).css("color", "purple");
+})
+
+$("button").on("mouseenter", function(){
+    $(this).css("font-weight", "bold");
+})
+$("button").on("mouseleave", function(){
+    $(this).css("font-weight", "normal");
+})
+
+/*
+ * Why use on() vs click()?
+ * click adds listeners for existing elements
+ * on() will add listeners for all potential future elements
+ */
