@@ -1,10 +1,108 @@
-#container{
-    width: 360px;
-    margin: 0 auto;
-    border: 2px solid gray;
+body{
+    font-family: Roboto;
+
+    /*From tutorial uses a gradient resource from this website
+     * https://uigradients.com/
+     * oh, seems like they don't use the -moz- anymore, still has -webkit-, 
+     * I guess a lot of updated browsers has more built in functionality now.
+     */
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1{
+    background-color: #2980B9;
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+input{
+    font-size: 18px;
+    color: #2980B9;
+    background-color: #F7F7F7;
+    /*with this width 100% and padding we go past container*/
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    /*I added border:0 since I didn't like the black border on left side*/
+    border: 3px solid rgba(0, 0, 0, 0);
+    /*this will fix the going past container
+     * border-box width and height properties include padding and border, not 
+     * the margin
+     */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+input:focus{
+    background-color: white;
+    border: 3px solid #2980B9;
+    /*gets rid of annoying highlight around input*/
+    outline: none;
+}
+
+li{
+    background-color: #FFF;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+/*every 2nd li gets own color*/
+li:nth-child(2n){
+    background-color: #F7F7F7;
+}
+
+/*when we hover over the span*/
+li:hover span{
+    width: 40px;
+    opacity: 1.0;
+}
+
+/*this whole span is just for the trash can from font awesome*/
+span{
+    background-color: #E74C3C;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    /*so these next two lines sets a small red box 40px in width*/
+    /*Set width to 0 so that when we hover over li (code above) it'll be 40px*/
+    width: 0px;
+    display: inline-block;
+    /*allows the sliding animation*/
+    transition: 0.2s linear;
+    -webkit-transition: 0.3 linear;
+    /*the icon will be slightly there after animation so we make opacity 0*/
+    opacity: 0;
+}
+
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .completed{
     color: gray;
     text-decoration: line-through;
 }
+
+.fa-plus{
+    float: right;
+}
+
+#container{
+    width: 360px;
+    margin: 100px auto;
+    background-color: #F7F7F7;
+    /*here we add a little shadow around container*/
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
