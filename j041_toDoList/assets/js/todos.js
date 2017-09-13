@@ -37,3 +37,8 @@ $("input[type='text").keypress(function(event){
         $("ul").append("<li><span><i class='fa fa-trash' aria-hidden='true'></i></span> " + todoText + "</li>");
     }
 });
+
+// this is an easy way to toggle the input using the fontawesome plus symbol
+$(".fa-plus").click(function(){
+    $("input[type='text']").fadeToggle();
+})
