@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- NOTE: It's really a good skill to be able to use code from other
+        libraries and adapting it to your own after reading documentation.
+     -->
+    <meta charset="utf-8">
+    <title>Circles</title>
+    <!-- here we use paper.js; open source vector graphics scripting framework 
+        that runs on top of the HTML5 Canvas -->
+    <script type="text/javascript" src="paper-full.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="circles.css">
+    
+    <!-- borrowing an example code from -->
+    <script type="text/paperscript" canvas="myCanvas">
+        
+        var col = 10;
+        var row = 10;
+
+        for(var i = 0; i< row; i++){
+            for(var j = 0; j< col; j++){
+                var myCircle = new Path.Circle(new Point(i*100, j*100), 10);
+                myCircle.fillColor = 'purple';
+                
+            }
+        }
+
+        var myCircle = new Path.Circle(new Point(0, 0), 10);
+        myCircle.fillColor = 'purple';
+
+
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas" resize></canvas>
+</body>
+</html>
