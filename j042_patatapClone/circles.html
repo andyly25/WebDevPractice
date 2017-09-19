@@ -13,8 +13,8 @@
     <link rel="stylesheet" type="text/css" href="circles.css">
     
     <!-- Note... best to include paperscript code internally using script tag
-        Otherwiseif made external js file, it will brak app due to Cross Origin
-        Resource sharing.
+        Otherwise if made external js file, it will brak app due to Cross Origin
+        Resource sharing. Hmm, I'll eventually look into this.
 
         Not sure yet, but my Sublime can't format this
      -->
@@ -206,8 +206,19 @@
 
         function onFrame(event){
             for(var i =0; i<circles.length; i++){
+                circles[i].scale(0.90)
                 circles[i].fillColor.hue +=1;
-                circles[i].scale(.95);
+                // here we get rid of circles that becomes too small
+                if(circles[i].area < 1){
+                    circles[i].remove();
+                    // recall that splice() methods changes the contents of an
+                    // array by removing existing elements and/or add new
+                    circles.splice(i, 1);
+                    // subtract so that loop doesn't skip a circle since
+                    // now that it has been shifted as result of splice
+                    i--;
+                    console.log(circles);
+                }
             }
         }
 
