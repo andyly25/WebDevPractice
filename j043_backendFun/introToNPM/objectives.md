@@ -21,3 +21,13 @@
         - do **npm install cat-me --save** and it will add a node_module folder
             - new problem! if already installed couple of modules, you'll see a whole bunch inside
             - this is some new update since npm 3 which installs dependencies flattened
+
+## TRIVIA on using NPM
+- when we install a package we have some options at the end
+    - --save-dev : used when you want to download a package for developers
+        - e.g. gulp, grunt... this is so when you distribute your code to production, these dependencies will not be available.
+    - --save : used when you want to save a package dependency for distribution
+        - things like angularjs or any other module that is required at run time by your program
+    - use nothing : not recommended
+        - install packages but no way the package.json be updated with dependencies
+        - no way for others to know what dependencies your module has
