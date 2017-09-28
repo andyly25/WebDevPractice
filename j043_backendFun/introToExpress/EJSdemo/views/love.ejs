@@ -1,3 +1,16 @@
+<!-- Header template (aka partials) -->
+<% include partials/header%>
+
 <h1>You fell in love with: <%= thingVar.toUpperCase() %> </h1>
 
+<!-- So why did we get rid of the = in < %? -->
+<% if(thingVar.toLowerCase() === "something"){ %>
+    <p>Yay, a something</p>
+<%} else{ %>
+    <p> Aww not something new! :(</p>
+<% } %>
+
 <p>This is the love.ejs file</p>
+
+<!-- Footer template -->
+<% include partials/footer%>
