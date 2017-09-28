@@ -29,6 +29,11 @@
 - discuss route order
 - note reddit does not do an app.get for each subreddit, they use patterns through route parameters
 
+# Rednering HTML and Templates
+- Use res.render() to render HTML (from EJS file)
+- Explain what EJS is
+- Pass variables to EJS templates
+
 ## NPM init and Package.json
 - use the `--save` flag to install packages
 - Explain what the package.json file does
