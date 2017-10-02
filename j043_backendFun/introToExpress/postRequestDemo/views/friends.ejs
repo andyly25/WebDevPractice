@@ -1,0 +1,13 @@
+<h1>Friends list here!</h1>
+
+<!-- loop throught our friends list we defined in app.js -->
+<% friends.forEach(function(friend){ %>
+    <!-- don't forget to have the = -->
+    <li><%= friend %></li>
+<% }); %>
+
+<form action="/addFriend" method="POST" accept-charset="utf-8">
+    <!-- remember adding the name attribute is how the data is sent to request body -->
+    <input type="text" name="newFriend" placeholder="name">
+    <button type="">I made a new friend</button>
+</form>
