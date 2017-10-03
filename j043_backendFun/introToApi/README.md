@@ -1,0 +1,19 @@
+# Intro to API
+- What is API?
+    - Application Programming Interface: interface for code and computer to talk to one another
+    - a set of routines, protocols, and tools for building software and apps
+    - web API's communicate via HTTP: e.g. twitter, fb, weather, reddit, and etc
+    - [IFTTT](https://ifttt.com) Helps you connect APIs together
+    - [programmableweb](https://www.programmableweb.com) Have a vast list of APIs
+- Data formats:
+    - when we use the internet, we make HTTP request and get HTML back
+    - APIs dont respond with HTML, but with data, not structure
+        - use simpler data formats: **XML**, **JSON**, etc
+- XML:
+    - Extended Markup Language
+        - similar to HTML, but does not describe presentation like HTML
+        - encodes key value pairs
+- JSON: 
+    - looks like JS objects, but everything is a string
+    - more popular than XML now because JS apps can access data from JSON easier
+- `curl` is a way to make requests to the command line

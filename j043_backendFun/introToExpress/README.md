@@ -29,10 +29,25 @@
 - discuss route order
 - note reddit does not do an app.get for each subreddit, they use patterns through route parameters
 
-# Rednering HTML and Templates
+# Rendering HTML and Templates
 - Use res.render() to render HTML (from EJS file)
 - Explain what EJS is
 - Pass variables to EJS templates
+
+# EJS Control Flow
+- Examples of control flow in EJS templates
+- if statements in an EJS file
+- write some loops
+- NOTE: two types of tags mostly used in EJS
+    - <%= %> : Whatever is inside will be rendered/evaluated to the page so if 5+5 inside, it will render 10
+    - <%  %> : Mainly used for logic and we don't want it rendered
+
+#Styles and Partials
+- Show how to properly include public assets
+- properly configure app to use EJS
+- use partials to dry up the code
+- in app.js you can use `app.use(express.static("SomeFolder"))` to load your css
+- `app.set("view engine", "ejs")` if you want express to assume all views are ejs
 
 ## NPM init and Package.json
 - use the `--save` flag to install packages
