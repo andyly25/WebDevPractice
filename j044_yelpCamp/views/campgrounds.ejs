@@ -1,7 +1,12 @@
+<!-- Note don't put / in front of partials, it means to go look from the root -->
+<% include partials/header %>
+
 <h1>This is the campground page!</h1>
 <% campgrounds.forEach(function(campground){ %>
     <div>
-        <h4>><%= campground.name %></h4>
+        <h4><%= campground.name %></h4>
         <img src="<%= campground.image %>" alt="">
     </div>
 <% }); %>
+
+<% include partials/footer %>
