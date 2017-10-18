@@ -4,10 +4,16 @@ var bodyParser = require("body-parser");
 
 // moving it out for now, later will be from database
 var campgrounds = [
-    {name: "River Grove", image: "https://farm4.staticflickr.com/3872/14435096036_39db8f04bc.jpg"},
-    {name: "Gazelle Peak", image: "https://farm3.staticflickr.com/2353/2069978635_2eb8b33cd4.jpg"},
-    {name: "Grass Valley", image: "https://farm3.staticflickr.com/2259/2182093741_164dc44a24.jpg"}
-]
+        {name: "Salmon Creek", image: "https://farm9.staticflickr.com/8442/7962474612_bf2baf67c0.jpg"},
+        {name: "Granite Hill", image: "https://farm1.staticflickr.com/60/215827008_6489cd30c3.jpg"},
+        {name: "Mountain Goat's Rest", image: "https://farm7.staticflickr.com/6057/6234565071_4d20668bbd.jpg"},
+        {name: "Salmon Creek", image: "https://farm9.staticflickr.com/8442/7962474612_bf2baf67c0.jpg"},
+        {name: "Granite Hill", image: "https://farm1.staticflickr.com/60/215827008_6489cd30c3.jpg"},
+        {name: "Mountain Goat's Rest", image: "https://farm7.staticflickr.com/6057/6234565071_4d20668bbd.jpg"},
+        {name: "Salmon Creek", image: "https://farm9.staticflickr.com/8442/7962474612_bf2baf67c0.jpg"},
+        {name: "Granite Hill", image: "https://farm1.staticflickr.com/60/215827008_6489cd30c3.jpg"},
+        {name: "Mountain Goat's Rest", image: "https://farm7.staticflickr.com/6057/6234565071_4d20668bbd.jpg"}
+];
 
 // we'll use this a lot so memorize or copy/paste
 app.use(bodyParser.urlencoded({extended: true}));

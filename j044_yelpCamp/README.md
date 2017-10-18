@@ -18,3 +18,5 @@
 - add basic unstyled form 
 
 ## Style the campgrounds page
+- add better header/title
+- make campgrounds display in a grid
