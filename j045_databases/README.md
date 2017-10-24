@@ -11,19 +11,24 @@
         - adding new columns and etc
     - non- relational you don't have to define patterns ahead of time
 - Users Table:
+
 | id | name | age |   city   |
 |----|------|-----|:--------:|
 | 1  | tim  | 57  | NYC      |
 | 2  | era  | 24  | Boulder  |
 | 3  | sue  | 40  | Missoula |
+
 - Comments
+
 | id | text                      |
 |----|---------------------------|
 | 1  | "LOL"                     |
 | 2  | "Apple pies"              |
 | 3  | "study bleh"              |
 | 4  | "UC systems is corrupted" |
+
 - To have a user associated with comments, we need to make a join table
+
 | userId | commentId |
 |--------|-----------|
 | 1      | 3         |
