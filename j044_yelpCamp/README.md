@@ -20,3 +20,7 @@
 ## Style the campgrounds page
 - add better header/title
 - make campgrounds display in a grid
+
+## Style the Navbar and Form
+- Add a navbar to all templates
+- style the new campground form
