@@ -86,3 +86,10 @@
 - Read
 - Update
 - Destroy 
+
+# Mongoose
+- What is Mongoose?
+    - object data modeling (ODM) library that provides rigorous modeling environment for your data
+    - includes built in type casting, validation, query building, business logic hooks and more
+- Why are we using it?
+- Interact with a Mongo Database using Mongoose

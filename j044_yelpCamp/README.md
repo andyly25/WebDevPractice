@@ -24,3 +24,4 @@
 ## Style the Navbar and Form
 - Add a navbar to all templates
 - style the new campground form
+
