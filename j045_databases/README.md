@@ -50,3 +50,39 @@
     favColor: blurple
 }
 ```
+
+## Intro to MongoDB
+- it is a noSQL non relational db
+- One of most popular with Node and Express
+- MEAN stack stands for: Mongo - Express - Angular - Node
+
+## Installing MongoDB
+![install MongoDB link](https://treehouse.github.io/installation-guides/mac/mongo-mac.html)
+
+## Mongo Commands
+- mongod    : I assume starts the server to run mongo
+- mongo     : starts the mongo terminal 
+- help      : help on what commands are available
+- show dbs  : show all dbs available
+    - if we do `show collections` after creating our dog insert we can view the dogs
+- use       : uses a db and if not there creates one and use it
+    - example: `use demo` 
+    - this will switch you to the demo db or create one
+- insert    : adds a new entry
+    - example: `db.dogs.insert({name:"Rusty", breed:"Mutt"})` 
+    - inside demo, we created a collection called dogs and will add a new dog element(s)
+- find      : find an entry
+    - if we do `db.dogs.find()` without passing in args, it will return all in that collection
+    - `db.dogs.find({breed:"Mutt"})` will show all dogs that are Mutt
+- update    : update a current entry
+    - `db.dogs.update({name:"Rusty"}, {$set:{name: "Tater", isCute: true}})`
+    - This updated the name and added in a new key value pair
+- remove    : delete an element
+    - `db.dogs.remove({breed: "poodle"})`
+    - will remove all poodles
+
+## CRUD
+- Create
+- Read
+- Update
+- Destroy 
