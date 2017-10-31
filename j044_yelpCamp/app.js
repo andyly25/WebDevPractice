@@ -13,7 +13,8 @@ app.set("view engine", "ejs");
 // Schema setup
 var campgroundSchema = new mongoose.Schema({
     name: String,
-    image: String
+    image: String,
+    description: String
 });
 
 // compiling schema into a model and turn into a code we can use with methods
@@ -21,8 +22,9 @@ var Campground = mongoose.model("Campground", campgroundSchema);
 
 // Campground.create(
 //     {
-        name: "Granite Hill", 
-//         image: "https://farm1.staticflickr.com/60/215827008_6489cd30c3.jpg"
+//        name: "Granite Hill", 
+//         image: "https://farm1.staticflickr.com/60/215827008_6489cd30c3.jpg",
+//         description: "Huge granite hill, no bathrooms. No water. Beautiful"
 //     }, function(err, campground){
 //         if(err){
 //             console.log(err);
@@ -49,7 +51,7 @@ app.get("/", function(req, res){
     res.render("landing");
 });
 
-// show all our campgrounds
+// INDEX route - show all our campgrounds
 app.get("/campgrounds", function(req, res){
     // get all campgrounds from DB
     Campground.find({}, function(err, allCampgrounds){
@@ -57,7 +59,7 @@ app.get("/campgrounds", function(req, res){
             console.log(err);
         }else{
             // this time we use the allCampgrounds passed in 
-            res.render("campgrounds", {campgrounds: allCampgrounds});
+            res.render("index", {campgrounds: allCampgrounds});
         }
     });
 
@@ -66,18 +68,16 @@ app.get("/campgrounds", function(req, res){
     // res.render("campgrounds", {campgrounds: campgrounds});
 });
 
-app.get("/campgrounds/new", function(req, res){
-    res.render("new.ejs")
-});
-
+// CREATE Route: add new campground to DB
 // Named similarly following the REST convention:
 // When we have a route for a new campground should have same name, but as post req
 app.post("/campgrounds", function(req, res){
     // get data from forms and add to campgrounds array
-    var name = req.body.name
-    var image = req.body.image
+    var name = req.body.name;
+    var image = req.body.image;
+    var desc = req.body.description;
     // name and image data will come from form
-    var newCampground = {name: name, image: image}
+    var newCampground = {name: name, image: image, description: desc}
 
     // We don't need this line anymore
     // campgrounds.push(newCampground)
@@ -94,6 +94,23 @@ app.post("/campgrounds", function(req, res){
     });
 });
 
+// NEW route: show form to create new campground
+app.get("/campgrounds/new", function(req, res){
+    res.render("new.ejs")
+});
+
+// SHOW route: shows more info about one campground
+app.get("/campgrounds/:id", function(req, res){
+    // find campground with provided ID
+    Campground.findById(req.params.id, function(err, foundCampground){
+        if(err){
+            console.log(err);
+        } else{
+            // render show template with campground
+            res.render("show", {campground: foundCampground});
+        }
+    });
+})
 
 app.listen(process.PORT || 3000, process.env.IP, function(){
     console.log('YelpCamp started on localhost:3000');

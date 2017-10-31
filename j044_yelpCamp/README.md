@@ -30,4 +30,14 @@
 - setup campground model
 - use campground model inside of our routes
 
+## Show page
+- review the RESTFUL routes we've seen so far
+- Add description to our campground model
+- show db.collection.drop() - this is to get rid of everything our db stored
+- Add a show route/template
 
+### RESTFUL Routes
+- INDEX:    /dogs       GET     Display a list of all dog
+- NEW:      /dogs/new   GET     Displays form to make a new dog
+- CREATE:   /dogs       POST    Add new dog to DB 
+- SHOW:     /dogs/:id   GET     Shows info about one dog (needs id for specific)
