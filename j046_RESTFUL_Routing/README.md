@@ -22,3 +22,14 @@
 - Create the Blog model
 - Add INDEX route and template
 - Add Simple Nav Bar
+
+## Basic Layout
+- add header and footer partials
+- include semantic UI
+    - going here to grab CDN: [Semantic UI CDN](https://cdnjs.com/libraries/semantic-ui)
+        - comapred to Bootstrap, you can just take a small chunk to use
+        - for us we use the semantic.min.css
+    - We'll make a menu similar from this [link](https://semantic-ui.com/collections/menu.html)
+    - and Icon from [here](https://semantic-ui.com/elements/icon.html)
+        - add icon using '<i class="code icon"></i>'
+- add simple nav

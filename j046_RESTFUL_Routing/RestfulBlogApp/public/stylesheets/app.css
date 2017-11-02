@@ -1,0 +1,5 @@
+/* Here we edit the size of our font icon*/
+i.icon {
+    /*double its size*/
+    font-size: 2em;
+}
