@@ -39,6 +39,7 @@ app.get("/", function(req, res){
     res.redirect("/blogs");
 })
 
+// INDEX Route
 app.get("/blogs", function(req, res){
     Blog.find({}, function(err, blogs){
         if(err){
@@ -51,7 +52,26 @@ app.get("/blogs", function(req, res){
     })
 });
 
+// NEW ROUTE
+app.get("/blogs/new", function(req, res){
+    res.render("new");
+});
 
+// CREATE ROUTE
+app.post("/blogs", function(req, res){
+    // create blog
+    // if we do req.body.body it auto has title, image, body to be used
+    Blog.create(req.body.blog, function(err, newBlog){
+        if(err){
+            // instead of console log err, we'll render new form again
+            res.render("new");
+        }else{
+            // Then, redirect to index
+            res.redirect("/blogs");
+        }
+    })
+   
+})
 
 // Starting on localhost 3000 site
 app.listen(process.env.PORT || 3000, process.env.IP, function(){

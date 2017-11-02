@@ -3,3 +3,8 @@ i.icon {
     /*double its size*/
     font-size: 2em;
 }
+
+/*fixed the navbar from overlapping*/
+.container.main{
+    margin-top: 7.0em;
+}

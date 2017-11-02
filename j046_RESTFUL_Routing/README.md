@@ -33,3 +33,22 @@
     - and Icon from [here](https://semantic-ui.com/elements/icon.html)
         - add icon using '<i class="code icon"></i>'
 - add simple nav
+
+## Notes:
+- `<input type="text" name="title">` before we used name attribute as this
+    - now we do: `<input type="text" name="blog[title]">`
+    - Now all of the values from the inputs in the form get added into one object (req.body.blog) 
+    - can easily input that data into the DB by passing in req.body.blog to Blog.create()
+    - this syntax is specific to body-parser
+
+## Putting the C in CRUD
+- add NEW route
+- add NEW template
+- add CREATE route
+- add CREATE template
+
+## SHOWtime
+- add SHOW Route
+- add SHOW template
+- add links to SHOW page
+- Style SHOW template
