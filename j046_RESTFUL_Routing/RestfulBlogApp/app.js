@@ -70,8 +70,12 @@ app.post("/blogs", function(req, res){
             res.redirect("/blogs");
         }
     })
-   
 })
+
+// SHOW ROUTE
+app.get("/blogs/:id", function(req, res){
+    res.send("SHOW PAGE");
+});
 
 // Starting on localhost 3000 site
 app.listen(process.env.PORT || 3000, process.env.IP, function(){
