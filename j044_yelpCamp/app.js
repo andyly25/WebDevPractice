@@ -112,6 +112,6 @@ app.get("/campgrounds/:id", function(req, res){
     });
 })
 
-app.listen(process.PORT || 3000, process.env.IP, function(){
+app.listen(process.env.PORT || 3000, process.env.IP, function(){
     console.log('YelpCamp started on localhost:3000');
 });

@@ -16,3 +16,9 @@
     - UPDATE:   /dogs/:id       PUT     Update particular dog, then redirect
     - DESTROY:  /dogs/:id       DELETE  Delete a particular dog, then redirect somewhere
 - Show example of RESTful routing in practice
+
+## Blog Index
+- Setup the Blog App
+- Create the Blog model
+- Add INDEX route and template
+- Add Simple Nav Bar
