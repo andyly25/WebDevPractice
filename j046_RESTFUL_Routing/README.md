@@ -7,14 +7,17 @@
     - a mapping between HTTP routes and CRUD
         - CREATE, READ, UPDATE, DESTROY
     - This is not built with Bootstrap, we'll use Semantic UI for Blog
-- List all 7 RESTful routes
-    - INDEX:    /dogs           GET     Display a list of all dog
-    - NEW:      /dogs/new       GET     Displays form to make a new dog
-    - CREATE:   /dogs           POST    Add new dog to DB 
-    - SHOW:     /dogs/:id       GET     Shows info about one dog (needs id for specific)
-    - EDIT:     /dogs/:id/edit  GET     Show edit form for one dog
-    - UPDATE:   /dogs/:id       PUT     Update particular dog, then redirect
-    - DESTROY:  /dogs/:id       DELETE  Delete a particular dog, then redirect somewhere
+    
+| Name    | Path           | HTTP verb | Purpose                                              |
+|---------|----------------|-----------|------------------------------------------------------|
+| Index   | /dogs          | GET       | Display a list of all dog                            |
+| New     | /dogs/new      | GET       | Displays form to make a new dog                      |
+| Create  | /dogs          | POST      | Add a new dog to the DB                              |
+| Show    | /dogs/:id      | GET       | Show info about one dog (Needs id for specific page) |
+| Edit    | /dogs/:id/edit | GET       | Show edit form for a dog                             |
+| Update  | /dogs/:id      | PUT       | Update particular dog, then redirect                 |
+| Destroy | /dogs/:id      | DELETE    | Delete particular dog, then redirect somehwhere      |
+
 - Show example of RESTful routing in practice
 
 ## Blog Index
