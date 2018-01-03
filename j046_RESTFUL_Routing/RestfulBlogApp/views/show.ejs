@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= blog.title %></div>
+    <div class="ui top attached">
+        <!-- this is taken from semantic-ui.com/views/item.html -->
+        <div class="item">
+            <!-- here we give a nice semantic ui image -->
+            <img class="ui centered rounded image" src="<%= blog.image %>">
+            <div class="content">
+                <!-- moment.js handles dates better -->
+                <span><%= blog.created.toDateString() %></span>
+            </div>
+            <div class="description">
+                <!-- instead of < % = if we use - it runs as code instead of string -->
+                <p><%- blog.body %></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<% include ./partials/footer %>
+

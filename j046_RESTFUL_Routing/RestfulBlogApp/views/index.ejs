@@ -4,9 +4,11 @@
 <% blogs.forEach(function(blog){ %>
     <div>   
         <h2> <%=blog.title %> </h2>
-        <img src="<%= blog.image %>" alt="unsplash image">
+        <img src="<%= blog.image %>">
         <span><%= blog.created %></span>
-        <p><%= blog.body %></p>
+        <!-- remember substring is lower case and this shortens the paragraph to 1st 100 chars -->
+        <p><%= blog.body.substring(0, 100) %>...</p>
+        <!-- adds read more for the blog postings specific to id -->
         <a href="/blogs/<%= blog._id %>" title="">Read More</a>
     </div>
 <% }) %>

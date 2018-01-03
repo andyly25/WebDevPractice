@@ -74,7 +74,16 @@ app.post("/blogs", function(req, res){
 
 // SHOW ROUTE
 app.get("/blogs/:id", function(req, res){
-    res.send("SHOW PAGE");
+    // grab the blog from given id
+    Blog.findById(req.params.id, function(err, foundBlog){
+        if(err){
+            // if can't find, then redirect back to the blog page
+            res.redirect("/blogs");
+        } else{
+            // if found render the show page of the blog posting
+            res.render("show", {blog: foundBlog});
+        }
+    })
 });
 
 // Starting on localhost 3000 site

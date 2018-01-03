@@ -55,3 +55,8 @@
 - add SHOW template
 - add links to SHOW page
 - Style SHOW template
+
+### SHOW notes:
+- instead of <%=, if you use <%- it would run as code instead of string
+    - Problem, if people used script tags they can do bad things :)
+    - solution: we can Express Sanitize to get rid of script tags
