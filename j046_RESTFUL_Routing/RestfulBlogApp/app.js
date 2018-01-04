@@ -86,6 +86,25 @@ app.get("/blogs/:id", function(req, res){
     })
 });
 
+// Edit Route
+// Reminder: req = request: A question from client like "What is/on your server?"
+// res = response: answer from server like "it's a text/html, ~2000 btyes, and here is the docs"
+app.get("/blogs/:id/edit", function(req, res){
+    // We have to use the id above to find the correct blog
+    Blog.findById(req.params.id, function(err, foundBlog){
+        if(err){
+            res.redirect("/blogs");
+        } else{
+            res.render("edit", {blog: foundBlog});
+        }
+    });
+});
+
+// UPDATE Route: NOTE we use put instead of get if folly RESTFUL routing
+app.put("/blogs/:id", function(req, res){
+    res.send("Update Route!");
+})
+
 // Starting on localhost 3000 site
 app.listen(process.env.PORT || 3000, process.env.IP, function(){
     console.log('started on localhost:3000');
