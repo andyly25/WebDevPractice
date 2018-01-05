@@ -69,6 +69,7 @@
 - Add Method-Override
     - Add using `npm install method-override --save`
     - Since HTML doesn't support PUT we cheat a little with POST
+        - HTML only support GET and POST
     - we do: `action="/blogs/<%= blog._id %>?_method=PUT" method="POST` 
     - this will overried our method in app.js to be PUT request
 

@@ -1,4 +1,7 @@
+
+// Here is all of our requires we are using for this app
 var bodyParser  = require("body-parser"),
+methodOverride  = require("method-override"),
 mongoose        = require("mongoose"),
 express         = require("express"),
 app             = express();
@@ -14,6 +17,10 @@ app.set("view engine", "ejs");
 // can serve custom style sheets
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
+// here is where we use method-override and the _method could be anything but by convention we use this
+// Whenever we get a request that has _method as a parameter we take whatever it is equal to
+// And then treat as a PUT or DELETE request for our case
+app.use(methodOverride("_method"));
 
 // MONGOOSE/MODEL CONFIG
 // Will have title, image, body, created
@@ -102,7 +109,16 @@ app.get("/blogs/:id/edit", function(req, res){
 
 // UPDATE Route: NOTE we use put instead of get if folly RESTFUL routing
 app.put("/blogs/:id", function(req, res){
-    res.send("Update Route!");
+    // now we attempt to find the existing blog and update with new data
+    // Blog.findByIdAndUpdate(id, newData, callback) // we use this
+    Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog){
+        if(err){
+            res.redirect("/blogs");
+        } else{
+            // and we then redirect to show page of specific blog
+            res.redirect("/blogs/" + req.params.id);
+        }
+    })
 })
 
 // Starting on localhost 3000 site
