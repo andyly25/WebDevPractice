@@ -15,6 +15,13 @@
                 <!-- instead of < % = if we use - it runs as code instead of string -->
                 <p><%- blog.body %></p>
             </div>
+            <a class="ui orange basic button" href="/blogs/<%= blog._id %>/edit">Edit </a>
+            <!-- for delete button we have to make a form for it 
+                it will also use the method override for DELETE
+            -->
+            <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST"> 
+                <button class="ui red basic button">DELETE</button>
+            </form>
         </div>
     </div>
 

@@ -121,6 +121,23 @@ app.put("/blogs/:id", function(req, res){
     })
 })
 
+// DELETE ROUTE
+/* if we didnt follow RESFUL route we could do 
+ * app.get("/blogs/id/delete") instead of what we have below
+ *
+ */
+app.delete("/blogs/:id", function(req, res){
+    // DESTROY the blog, convenient function findByIdAndRemove is used
+    Blog.findByIdAndRemove(req.params.id, function(err){
+        if(err){
+            res.redirect("/blogs");
+        } else{
+            res.redirect("/blogs");
+        }
+    })
+    // Redirect somewhere
+});
+
 // Starting on localhost 3000 site
 app.listen(process.env.PORT || 3000, process.env.IP, function(){
     console.log('started on localhost:3000');
