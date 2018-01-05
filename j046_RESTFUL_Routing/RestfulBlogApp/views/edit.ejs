@@ -6,7 +6,9 @@
     <div class="ui huge header"><%= blog.title %></div>
     <!-- Since we are editing and updating we need change POST -> PUT -->
     <!-- And we are targeting specific blog id so in action we add that -->
-    <form class="ui form" action="/blogs/<%= blog._id %>" method="PUT"> 
+    <!-- PROBLEM: HTML forms don't support PUT requests and would default as GET -->
+    <!-- We cheat using method override to replace the POST with PUT -->
+    <form class="ui form" action="/blogs/<%= blog._id %>?_method=PUT" method="POST"> 
         <div class="field">
             <label>Title</label>
             <!-- So instead of placeholder we replace with value -->
